@@ -9,15 +9,14 @@ def taxable_income(income, miles):
     This function determines how much of your quarterly income is taxable.
     """
     deduction = miles * 0.67 # 2024 standard mileage rate.
-    tax_income = income - deduction
+    tax_income = round(income - deduction) # Tax software does a lot of rounding, so that is being done here.
     return tax_income
     
 
 quarterly_income = float(input("From your side jobs, how much did you make for the previous quarter? $"))
 miles_driven = float(input("How many miles did you drive for the previous quarter? "))
-
 quar_tax_income = taxable_income(quarterly_income, miles_driven)
-print(f"Your taxable income for the previous quarter is ${quar_tax_income}")
+# print(f"Your taxable income for the previous quarter is ${quar_tax_income}")
 
 
 """
