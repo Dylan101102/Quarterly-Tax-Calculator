@@ -11,7 +11,31 @@ def taxable_income(income, miles):
     """
     deduction = miles * 0.67 # 2024 standard mileage rate.
     tax_income = round(income - deduction) # Tax software does a lot of rounding, so that is being done here.
-    return tax_income    
+    return tax_income
+
+def fed_tax_rate (yearly_income, status):
+    """
+    This function determines your tax rate.
+    """
+    match status:
+        case "1": # Single status filer.
+            if yearly_income <= 11600:
+                tax_rate = 0.10
+            elif yearly_income >= 11601 and yearly_income <= 47150:
+                tax_rate = 0.12
+            elif yearly_income >= 47151 and yearly_income <= 100525:
+                tax_rate = 0.22
+            elif yearly_income >= 100526 and yearly_income <= 191950:
+                tax_rate = 0.24
+            elif yearly_income >= 191951 and yearly_income <= 243725:
+                tax_rate = 0.32
+            elif yearly_income >= 243726 and yearly_income <= 609350:
+                tax_rate = 0.35
+            else:
+                tax_rate = 0.37
+    return tax_rate
+        #case "2": # Married Filing Jointly
+
 
 quarterly_income = float(input("From your side jobs, how much did you make for the previous quarter? $"))
 miles_driven = float(input("How many miles did you drive for the previous quarter? "))
@@ -21,4 +45,5 @@ quar_tax_income = taxable_income(quarterly_income, miles_driven)
 anticip_yearly_income = float(input("What was your taxable income last year? This will determine your tax rate: $"))
 marital_status = input("To also determine your tax rate, you will need to input your filing status. Press 1 if you are 'Single'," 
                         " 2 if you are 'Married Filing Jointly', 3 if you are 'Married, Filing Separately', or 4 if you are 'Head of Household': ")
+tax_rate = fed_tax_rate(anticip_yearly_income, marital_status)
 
