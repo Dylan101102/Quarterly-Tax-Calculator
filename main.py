@@ -33,8 +33,53 @@ def fed_tax_rate (yearly_income, status):
                 tax_rate = 0.35
             else:
                 tax_rate = 0.37
+        case "2": # Married Filing Jointly
+            if yearly_income <= 23200:
+                tax_rate = 0.10
+            elif yearly_income >= 23201 and yearly_income <= 94300:
+                tax_rate = 0.12
+            elif yearly_income >= 94301 and yearly_income <= 201050:
+                tax_rate = 0.22
+            elif yearly_income >= 201051 and yearly_income <= 383900:
+                tax_rate = 0.24
+            elif yearly_income >= 383901 and yearly_income <= 487450:
+                tax_rate = 0.32
+            elif yearly_income >= 487451 and yearly_income <= 731200:
+                tax_rate = 0.35
+            else:
+                tax_rate = 0.37
+        case "3": # Married Filing Separately
+            if yearly_income <= 11600:
+                tax_rate = 0.10
+            elif yearly_income >= 11601 and yearly_income <= 47150:
+                tax_rate = 0.12
+            elif yearly_income >= 47151 and yearly_income <= 100525:
+                tax_rate = 0.22
+            elif yearly_income >= 100526 and yearly_income <= 191950:
+                tax_rate = 0.24
+            elif yearly_income >= 191951 and yearly_income <= 243725:
+                tax_rate = 0.32
+            elif yearly_income >= 243726 and yearly_income <= 365600:
+                tax_rate = 0.35
+            else:
+                tax_rate = 0.37
+        case "4": # Head of Household
+            if yearly_income <= 16550:
+                tax_rate = 0.10
+            elif yearly_income >= 16551 and yearly_income <= 63100:
+                tax_rate = 0.12
+            elif yearly_income >= 63101 and yearly_income <= 100500:
+                tax_rate = 0.22
+            elif yearly_income >= 100501 and yearly_income <= 191950:
+                tax_rate = 0.24
+            elif yearly_income >= 191951 and yearly_income <= 243700:
+                tax_rate = 0.32
+            elif yearly_income >= 243701 and yearly_income <= 609350:
+                tax_rate = 0.35
+            else:
+                tax_rate = 0.37
     return tax_rate
-        #case "2": # Married Filing Jointly
+        
 
 
 quarterly_income = float(input("From your side jobs, how much did you make for the previous quarter? $"))
@@ -44,6 +89,6 @@ quar_tax_income = taxable_income(quarterly_income, miles_driven)
 
 anticip_yearly_income = float(input("What was your taxable income last year? This will determine your tax rate: $"))
 marital_status = input("To also determine your tax rate, you will need to input your filing status. Press 1 if you are 'Single'," 
-                        " 2 if you are 'Married Filing Jointly', 3 if you are 'Married, Filing Separately', or 4 if you are 'Head of Household': ")
+                        " 2 if you are 'Married Filing Jointly', \n3 if you are 'Married, Filing Separately', or 4 if you are 'Head of Household': ")
 tax_rate = fed_tax_rate(anticip_yearly_income, marital_status)
-
+# print(tax_rate)
