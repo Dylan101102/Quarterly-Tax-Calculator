@@ -13,62 +13,62 @@ def fed_tax_rate (yearly_income, status):
     """
     match status:
         case "1": # Single status filer.
-            if yearly_income <= 11600:
+            if yearly_income <= 11925:
                 tax_rate = 0.10
-            elif yearly_income >= 11601 and yearly_income <= 47150:
+            elif yearly_income >= 11926 and yearly_income <= 48475:
                 tax_rate = 0.12
-            elif yearly_income >= 47151 and yearly_income <= 100525:
+            elif yearly_income >= 48476 and yearly_income <= 103350:
                 tax_rate = 0.22
-            elif yearly_income >= 100526 and yearly_income <= 191950:
+            elif yearly_income >= 103351 and yearly_income <= 197300:
                 tax_rate = 0.24
-            elif yearly_income >= 191951 and yearly_income <= 243725:
+            elif yearly_income >= 197301 and yearly_income <= 250525:
                 tax_rate = 0.32
-            elif yearly_income >= 243726 and yearly_income <= 609350:
+            elif yearly_income >= 250526 and yearly_income <= 626350:
                 tax_rate = 0.35
             else:
                 tax_rate = 0.37
         case "2": # Married Filing Jointly
-            if yearly_income <= 23200:
+            if yearly_income <= 23850:
                 tax_rate = 0.10
-            elif yearly_income >= 23201 and yearly_income <= 94300:
+            elif yearly_income >= 23851 and yearly_income <= 96950:
                 tax_rate = 0.12
-            elif yearly_income >= 94301 and yearly_income <= 201050:
+            elif yearly_income >= 96951 and yearly_income <= 206700:
                 tax_rate = 0.22
-            elif yearly_income >= 201051 and yearly_income <= 383900:
+            elif yearly_income >= 206701 and yearly_income <= 394600:
                 tax_rate = 0.24
-            elif yearly_income >= 383901 and yearly_income <= 487450:
+            elif yearly_income >= 394601 and yearly_income <= 501050:
                 tax_rate = 0.32
-            elif yearly_income >= 487451 and yearly_income <= 731200:
+            elif yearly_income >= 501051 and yearly_income <= 751600:
                 tax_rate = 0.35
             else:
                 tax_rate = 0.37
         case "3": # Married Filing Separately
-            if yearly_income <= 11600:
+            if yearly_income <= 11925:
                 tax_rate = 0.10
-            elif yearly_income >= 11601 and yearly_income <= 47150:
+            elif yearly_income >= 11926 and yearly_income <= 48475:
                 tax_rate = 0.12
-            elif yearly_income >= 47151 and yearly_income <= 100525:
+            elif yearly_income >= 48476 and yearly_income <= 103350:
                 tax_rate = 0.22
-            elif yearly_income >= 100526 and yearly_income <= 191950:
+            elif yearly_income >= 103351 and yearly_income <= 197300:
                 tax_rate = 0.24
-            elif yearly_income >= 191951 and yearly_income <= 243725:
+            elif yearly_income >= 197301 and yearly_income <= 250525:
                 tax_rate = 0.32
-            elif yearly_income >= 243726 and yearly_income <= 365600:
+            elif yearly_income >= 250526 and yearly_income <= 375800:
                 tax_rate = 0.35
             else:
                 tax_rate = 0.37
         case "4": # Head of Household
-            if yearly_income <= 16550:
+            if yearly_income <= 17000:
                 tax_rate = 0.10
-            elif yearly_income >= 16551 and yearly_income <= 63100:
+            elif yearly_income >= 17001 and yearly_income <= 64850:
                 tax_rate = 0.12
-            elif yearly_income >= 63101 and yearly_income <= 100500:
+            elif yearly_income >= 64851 and yearly_income <= 103350:
                 tax_rate = 0.22
-            elif yearly_income >= 100501 and yearly_income <= 191950:
+            elif yearly_income >= 103351 and yearly_income <= 197300:
                 tax_rate = 0.24
-            elif yearly_income >= 191951 and yearly_income <= 243700:
+            elif yearly_income >= 197301 and yearly_income <= 250500:
                 tax_rate = 0.32
-            elif yearly_income >= 243701 and yearly_income <= 609350:
+            elif yearly_income >= 250501 and yearly_income <= 626350:
                 tax_rate = 0.35
             else:
                 tax_rate = 0.37
