@@ -12,9 +12,10 @@ miles_driven = float(input("How many miles did you drive for the previous quarte
 quar_tax_income = functions.taxable_income(quarterly_income, miles_driven)
 # print(f"Your taxable income for the previous quarter is ${quar_tax_income}")
 
-anticip_yearly_income = float(input("What was your taxable income last year? This will determine your tax rate: $"))
+previous_year_taxable_income = float(input("What was your taxable income last year? This will determine your tax rate: $"))
+# previous_year_taxable_income = WILL BE FROM 2025 TAXES FILED IN 2026. THIS WILL BE SET TO A CONSTANT.
 marital_status = input("To also determine your tax rate, you will need to input your filing status. Press 1 if you are 'Single'," 
                         " 2 if you are 'Married Filing Jointly', \n3 if you are 'Married, Filing Separately', or 4 if you are 'Head of Household': ")
-tax_rate = functions.fed_tax_rate(anticip_yearly_income, marital_status)
+tax_rate = functions.fed_tax_rate(previous_year_taxable_income, marital_status)
 irs_payment = functions.pay_irs(tax_rate, quar_tax_income)
 print(f"Please owe the IRS ${irs_payment}.")
