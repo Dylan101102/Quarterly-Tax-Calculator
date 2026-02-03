@@ -7,9 +7,9 @@
 import functions
 
 quarterly_income = float(input("From your side jobs, how much did you make for the previous quarter? $"))
+tips = float(input("Of that amount, how much was from tips? $"))
 miles_driven = float(input("How many miles did you drive for the previous quarter? "))
-quar_tax_income = functions.taxable_income(quarterly_income, miles_driven)
-# print(f"Your taxable income for the previous quarter is ${quar_tax_income}")
+quar_tax_income = functions.taxable_income(quarterly_income, tips, miles_driven)
 
 previous_year_taxable_income = float(input("What was your taxable income last year? This will determine your tax rate: $"))
 # previous_year_taxable_income = WILL BE FROM 2025 TAXES FILED IN 2026. THIS WILL BE SET TO A CONSTANT.

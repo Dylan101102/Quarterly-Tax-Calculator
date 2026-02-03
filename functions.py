@@ -1,9 +1,9 @@
-def taxable_income(income, miles):
+def taxable_income(income, quarterly_tips, miles):
     """
     This function determines how much of your quarterly income is taxable.
     """
-    standard_mileage_rate = 0.725 # 2026 standard mileage rate.
-    deduction = miles * standard_mileage_rate
+    standard_mileage_deduction = 0.725  # For 2026 tax year.
+    deduction = miles * standard_mileage_deduction
     tax_income = round(income - deduction) # Tax software does a lot of rounding, so that is being done here.
     return tax_income
 
