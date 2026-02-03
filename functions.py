@@ -2,7 +2,8 @@ def taxable_income(income, miles):
     """
     This function determines how much of your quarterly income is taxable.
     """
-    deduction = miles * 0.725 # 2026 standard mileage rate.
+    standard_mileage_rate = 0.725 # 2026 standard mileage rate.
+    deduction = miles * standard_mileage_rate
     tax_income = round(income - deduction) # Tax software does a lot of rounding, so that is being done here.
     return tax_income
 
@@ -79,7 +80,13 @@ def pay_irs(rate, quarterly_income):
     """
     This function determines how much you will pay to the IRS quarterly with the given information.
     """
+    social_security_tax_rate = 0.124
+    medicare_tax_rate = 0.029
+    self_employment_tax_rate = social_security_tax_rate + medicare_tax_rate
+    earnings_for_self_employment_tax = quarterly_income * 0.9235
+    self_employment_tax = earnings_for_self_employment_tax * self_employment_tax_rate
+
     fed_income_tax = rate * quarterly_income
-    self_employment_tax = (quarterly_income * 0.9235) * 0.153
     total_taxes = fed_income_tax + self_employment_tax
+
     return round(total_taxes)

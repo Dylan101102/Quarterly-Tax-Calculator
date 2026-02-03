@@ -2,7 +2,6 @@
 # By no means is this 100% perfect, but does do a decent job at least of estimating quarterly taxes.
 # For example, income is not taxed at a single tax rate. For simplicity, it will be here. Lowering tax liability come April is the main goal here.
 # This program also assumes the taxable income between the current and previous year do not differ too much, but again, this was done for simplicity.
-# For testing purposes, will be using 2024 rates to test if it matches what I paid quarterly last year. Will eventually switch over to 2025 numbers.
 # This program also assumes you live in a state with no state income tax, like Florida.
 
 import functions
