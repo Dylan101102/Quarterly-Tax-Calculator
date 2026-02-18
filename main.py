@@ -8,11 +8,8 @@ import functions
 
 quarterly_income = float(input("From your side jobs, how much did you make for the previous quarter? $"))
 tips = float(input("Of that amount, how much was from tips? $"))
-tips = float(input("Of that amount, how much was from tips? $"))
 miles_driven = float(input("How many miles did you drive for the previous quarter? "))
 quar_tax_income = functions.taxable_income(quarterly_income, tips, miles_driven)
-quar_tax_income = functions.taxable_income(quarterly_income, tips, miles_driven)
-
 previous_year_taxable_income = 30544 #2025 taxable income.
 marital_status = input("To also determine your tax rate, you will need to input your filing status. Press 1 if you are 'Single'," 
                         " 2 if you are 'Married Filing Jointly', \n3 if you are 'Married, Filing Separately', or 4 if you are 'Head of Household': ")
